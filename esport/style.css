@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #323233;
+    background-image: url(img/pozadina.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0);;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d65151;
+}
+
+
+@media (max-width: 1000px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;     
+        gap: 10px;               
+        font-size: 18px;         
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: row; 
+        align-items: center;     
+        gap: 10px;               
+        font-size: 18px;         
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 0;
+    }
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #d6d6d6;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #bbbbc7;
+}
+
+.btn {
+    background: #d31212;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #960404;
+}
+
+.news {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.news h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #c5c5c5;
+    
+}
+
+.news article {
+    padding: 15px;
+    margin-left: 15%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #dbdbdb;
+    max-width: 70%;
+    border: 1px solid white;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.quick-links {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quick-links a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.quick-links a:hover{
+    color: #d65151;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+.tournaments {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ccc;
+}
+
+.tournaments h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto 40px auto;
+    font-size: 20px;
+}
+
+thead {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+th, td {
+    border: 2px solid #ffffff;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tr:hover {
+    background: #aa2929;
+}
+
+
+
+.grid-tournaments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-tournaments .card {
+    background: #f0f0f0;
+    color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-tournaments .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.tournaments {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ccc;
+}
+
+/* Osnovna tabela */
+.tournaments table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto 40px auto;
+    font-size: 20px;
+}
+
+.tournaments th, .tournaments td {
+    border: 2px solid #ffffff;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.tournaments tr:nth-child(even),
+.tournaments tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tournaments tr:hover {
+    background: #aa2929;
+}
+
+@media (max-width: 1024px) {
+    .tournaments table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tournaments table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .tournaments th, .tournaments td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tournaments table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .tournaments th, .tournaments td {
+        padding: 8px;
+    }
+
+    .tournaments h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+
+.card {
+    padding: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+    text-align: center;
+    max-width: 70%;
+    margin-left: 15%;
+    color: #dbdbdb;
+    border: 2px solid white;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.card article {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+.gallery {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.gallery h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #dbdbdb;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    
+}
+
+.grid-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.card{
+    margin-top: 10px;
+}
+
+.card1 {
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: #dbdbdb;
+}
+
+.card1 h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card1 p{
+    text-align: center;
+}
+
+
+.card1 article {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+hr{
+    max-width: 60%;
+    margin-left: 20%;
+}
+
+
+.teams {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    gap: 20px;
+}
+
+.team-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.team-text {
+    flex: 1;
+}
+
+.team-text h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.team-text p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.team-card.right img {
+    order: 2;
+}
+
+.team-card.left img {
+    order: 0;
+}
+
+@media (max-width: 1024px) {
+    .team-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-card img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        order: 0 !important;
+    }
+
+    .team-text {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .teams {
+        margin: 20px 10px;
+    }
+
+    .team-card {
+        width: 100%;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .team-text h2 {
+        font-size: 22px;
+    }
+
+    .team-text p {
+        font-size: 16px;
+    }
+}
+
+
+.contact {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.contact h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #dbdbdb;
+}
+
+.contact label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #dbdbdb;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: #dbdbdb;
+}
+
+
+.contact button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #ff0000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #880101;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}
+
+
+
